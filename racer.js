@@ -1,22 +1,42 @@
 var body = document.querySelector('body');
-var move1 = function() {
-var gameHasBegun = false;
+function Bolt() {
+	this.winPosition= "1000px"
+	this.losePosition= "100px"
 }
 
-document.addEventListener("click", "move1()")
-var theNames = [];
+Bolt.prototype.create = function(div) {
+	var x = document.createElement("IMG");
+	x.setAttribute("src", "usain-bolt.jpg");
+	x.setAttribute("height", "72px");
+	x.setAttribute("padding", "10px");
+	x.setAttribute("left", "10px");
+	div.appendChild(x);
+}
+
+
+function Player() {
+	this.winPosition= "1000px"
+	this.losePosition= "100px"
+}
+
+Player.prototype.create = function(div) {
+    var x = document.createElement("IMG");
+	x.setAttribute("src", "runner.png");
+	x.setAttribute("height", "36px");
+	x.setAttribute("padding", "10px");
+	x.setAttribute("left", "10px");
+	x.setAttribute("height", "81vh");
+	div.appendChild(x);
+}
+var theNames = [null,null,null,null,null,null];
 var createPlayerOne = function() {
 	window.onload = function() {}
 	var name1 = prompt("Player 1, What's your name?");
-	theNames.push(name1);
+	theNames[0] = name1
 	if (name1 == "usain bolt")
 	{	
-		var x = document.createElement("IMG");
-			x.setAttribute("src", "usain-bolt.jpg");
-			x.setAttribute("height", "72px");
-			x.setAttribute("padding", "10px");
-			x.setAttribute("left", "10px")
-		pOne.appendChild(x);
+		var bolt1 = new Bolt();
+		bolt1.create(pOne)
 		alert("You will use the Q key to move your runner")
 	}
 	else if (name1 == "") 
@@ -24,26 +44,18 @@ var createPlayerOne = function() {
 		alert("IF YOU CLICK THE BUTTON ENTER A NAME! STOP JERKING ME AROUND")
 	}	
 	else {
-		var x = document.createElement("IMG");
-			x.setAttribute("src", "runner.png");
-			x.setAttribute("height", "36px");
-			x.setAttribute("padding", "10px");
-			x.setAttribute("left", "10px")
-		pOne.appendChild(x);
-		x.setAttribute("height", "81vh");
+		var player1 = new Player();
+		player1.create(pOne)
 		alert("You will use the Q key to move your runner")
 	}
 }
 
 var createPlayerTwo = function() {
 	var name2 = prompt("Player 2, What's your name?");
-	theNames.push(name2);
+	theNames[1] = name2
 	if (name2 == "usain bolt") {
-		var x = document.createElement("IMG");
-			x.setAttribute("src", "usain-bolt.jpg");
-			x.setAttribute("height", "72px");
-			x.setAttribute("padding", "10px");
-		pTwo.appendChild(x);
+		var bolt2 = new Bolt();
+		bolt2.create(pTwo)
 		alert("You will use the SHIFT key to move your runner")
 }
 	else if (name2 == "") {
@@ -52,48 +64,35 @@ var createPlayerTwo = function() {
 	else
 {
 	var x = document.createElement("IMG");
-			x.setAttribute("src", "runner.png");
-			x.setAttribute("height", "36px");
-			x.setAttribute("padding", "10px");
-		pTwo.appendChild(x);
-		x.setAttribute("height", "81vh");
+		var player2 = new Player();
+		player2.create(pTwo)
 		alert("You will use the SHIFT key to move your runner")
 	}
 }
 var createPlayerThree = function() {
-	var name3 = prompt("Player 3, What's your name? No caps please");
-	theNames.push(name3);
+	var name3 = prompt("Player 3, What's your name?");
+	theNames[2] = name3
 	if (name3 == "usain bolt") {
-		var x = document.createElement("IMG");
-			x.setAttribute("src", "usain-bolt.jpg");
-			x.setAttribute("height", "72px");
-			x.setAttribute("padding", "10px");
-		pThree.appendChild(x);
-			alert("You will use the F key to move your runner")
+		var bolt3 = new Bolt();
+		bolt3.create(pThree)
+		alert("You will use the F key to move your runner")
 }
 	else if (name3 == "") {
 		alert("IF YOU CLICK THE BUTTON ENTER A NAME! STOP JERKING ME AROUND")
 	}
 	else
-{	var x = document.createElement("IMG");
-		x.setAttribute("src", "runner.png");
-		x.setAttribute("height", "40px");
-		x.setAttribute("padding", "10px");
-	pThree.appendChild(x);
-	x.setAttribute("height", "81vh");
-	alert("You will use the F key to move your runner")
+{		var player3 = new Player();
+		player3.create(pThree)
+		alert("You will use the F key to move your runner")
 	}
 }
 
 var createPlayerFour = function() {
-var name4 = prompt("Player 4, What's your name? No caps please");
-theNames.push(name4);
+var name4 = prompt("Player 4, What's your name?");
+theNames[3] = name4
 	if (name4 == "usain bolt") {
-		var x = document.createElement("IMG");
-			x.setAttribute("src", "usain-bolt.jpg");
-			x.setAttribute("height", "72px");
-			x.setAttribute("padding", "10px");
-		pFour.appendChild(x);
+		var bolt4 = new Bolt();
+		bolt4.create(pFour)
 		alert("You will use the 8 key to move your runner")
 }
 	else if (name4 == "") {
@@ -101,25 +100,18 @@ theNames.push(name4);
 	}
 	else
 	{
-	var x = document.createElement("IMG");
-		x.setAttribute("src", "runner.png");
-		x.setAttribute("height", "40px");
-		x.setAttribute("padding", "10px");
-	pFour.appendChild(x);
-	x.setAttribute("height", "81vh");
+	var player4 = new Player();
+	player4.create(pFour)
 	alert("You will use the 8 key to move your runner")
 	}
 }
 
 var createPlayerFive = function() {
-	var name5 = prompt("Player 5, What's your name? No caps please");
-	theNames.push(name5);
+	var name5 = prompt("Player 5, What's your name?");
+	theNames[4] = name5
 	if (name5 == "usain bolt") {
-		var x = document.createElement("IMG");
-			x.setAttribute("src", "usain-bolt.jpg");
-			x.setAttribute("height", "72px");
-			x.setAttribute("padding", "10px");
-		pFive.appendChild(x);
+		var bolt5 = new Bolt();
+		bolt5.create(pFive)
 		alert("You will use the J key to move your runner")
 }
 	else if (name5 == "") {
@@ -127,25 +119,18 @@ var createPlayerFive = function() {
 	}
 	else
 {
-	var x = document.createElement("IMG");
-		x.setAttribute("src", "runner.png");
-		x.setAttribute("height", "40px");
-		x.setAttribute("padding", "10px");
-	pFive.appendChild(x);
-	x.setAttribute("height", "81vh");
+	var player5 = new Player();
+	player5.create(pFive)
 	alert("You will use the J key to move your runner")
 	}
 }
 
 var createPlayerSix = function() {
-	theNames.push(name6);
-var name6 = prompt("Player 6, What's your name? No caps please");
+var name6 = prompt("Player 6, What's your name?");
+	theNames[5] = name6
 	if (name6 == "usain bolt") {
-		var x = document.createElement("IMG");
-			x.setAttribute("src", "usain-bolt.jpg");
-			x.setAttribute("height", "72px");
-			x.setAttribute("padding", "10px");
-		pSix.appendChild(x);
+		var bolt6 = new Bolt();
+		bolt6.create(pSix)
 		alert("You will use the / key to move your runner")
 }
 	else if (name6 == "") {
@@ -153,12 +138,8 @@ var name6 = prompt("Player 6, What's your name? No caps please");
 	}
 	else
 {
-	var x = document.createElement("IMG");
-		x.setAttribute("src", "runner.png");
-		x.setAttribute("height", "40px");
-		x.setAttribute("padding", "10px");
-	pSix.appendChild(x);
-	x.setAttribute("height", "81vh");
+	var player6 = new Player();
+		player6.create(pSix)
 	alert("You will use the / key to move your runner")
 	}
 }
@@ -455,9 +436,6 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "1000px";
-			var x = document.createElement("img");
-			x.setAttribute("src","/users/tobyzitsman/desktop/bolt1.pjg")
-			body.appendChild(x);
 			keysPressed[0] = false;
 			keysPressed[1] = false;
 			keysPressed[2] = false;
