@@ -28,6 +28,16 @@ Player.prototype.create = function(div) {
 	x.setAttribute("height", "81vh");
 	div.appendChild(x);
 }
+
+function dontMove() {
+	keysPressed[0] = false;
+	keysPressed[1] = false;
+	keysPressed[2] = false;
+	keysPressed[3] = false;
+	keysPressed[4] = false;
+	keysPressed[5] = false;
+}
+
 var theNames = [null,null,null,null,null,null];
 var createPlayerOne = function() {
 	window.onload = function() {}
@@ -276,12 +286,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 			}
 			else {
 			alert(theNames[0] + " is the winner");
@@ -291,12 +296,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 		}
 	}
 		else if (document.getElementById("pTwo").style.left == '867px') {
@@ -308,12 +308,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 			}
 			else {
 			alert(theNames[1] + " is the winner");
@@ -323,12 +318,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 	}
 }
 		else if (document.getElementById("pThree").style.left == '867px') {
@@ -340,12 +330,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 			}
 			else {
 			alert(theNames[2] + " is the winner");
@@ -355,12 +340,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 	}
 }
 		else if (document.getElementById("pFour").style.left == '867px') {
@@ -372,12 +352,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "1000px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 			}
 			else {
 			alert(theNames[3] + " is the winner");
@@ -387,12 +362,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "1000px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 	}
 }
 		else if (document.getElementById("pFive").style.left == '867px') {
@@ -404,12 +374,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "1000px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 			}
 			else {
 			alert(theNames[4] + " is the winner");
@@ -419,12 +384,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "1000px";
 			document.getElementById('pSix').style.left = "100px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 	}
 }
 		else if (document.getElementById("pSix").style.left == '867px') {
@@ -436,12 +396,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "1000px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 			}
 			else {
 			alert(theNames[5] + " is the winner");
@@ -451,12 +406,7 @@ var whoWins = function() {
 			document.getElementById('pFour').style.left = "100px";
 			document.getElementById('pFive').style.left = "100px";
 			document.getElementById('pSix').style.left = "1000px";
-			keysPressed[0] = false;
-			keysPressed[1] = false;
-			keysPressed[2] = false;
-			keysPressed[3] = false;
-			keysPressed[4] = false;
-			keysPressed[5] = false;
+			dontMove()
 	}
 }
 }
